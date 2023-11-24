@@ -52,21 +52,20 @@ function addBookToLibrary() {
     let buttons = document.createElement("div")
     buttons.classList.add("buttons")
 
-    let titleDisplay = document.createElement("p")
+    let titleDisplay = document.createElement("div")
     titleDisplay.classList.add("title")
     titleDisplay.textContent = newBook.title
 
-    let authorDisplay = document.createElement("p")
+    let authorDisplay = document.createElement("div")
     authorDisplay.classList.add("author")
     authorDisplay.textContent = newBook.author
 
-    let pagesDisplay = document.createElement("p")
+    let pagesDisplay = document.createElement("div")
     pagesDisplay.classList.add("pages")
     pagesDisplay.textContent = `${newBook.pages} pages`
 
     let readBtn = document.createElement("button")
     readBtn.classList.add("readBtn")
-    readBtn.textContent = "Read"
 
     let removeBtn = document.createElement("button")
     removeBtn.classList.add("removeBtn")
@@ -76,7 +75,31 @@ function addBookToLibrary() {
     text.append(titleDisplay, authorDisplay, pagesDisplay)
     buttons.append(readBtn, removeBtn)
     cardDisplay.append(card)
+
+    if (read.checked) {
+        readBtn.textContent = "Read"
+        // readBtn.style.boxShadow = "0 4px 7px 0 rgb(127 127 127), 0 -6px 10px 0 rgb(165 165 165)"; 
+    } else {
+        readBtn.textContent = "Not Read"
+    }
+
+    readBtn.onclick = changeStatus;
+    removeBtn.onclick = removeCard;
 }
+
+function changeStatus(e) {
+    if (e.target.textContent === "Read") {
+        e.target.textContent = "Not Read"
+        e.target.style.boxShadow = "none"
+    } else if (e.target.textContent = "Not Read") {
+        e.target.textContent = "Read"
+        // e.target.style.boxShadow = "0 4px 7px 0 rgb(127 127 127), 0 -6px 10px 0 rgb(165 165 165)";
+    }
+}
+
+function removeCard(e) {
+    e.target.parentElement.parentElement.remove();
+  }
 
 function submitPressed() {
     formCard.style.display = "none";
