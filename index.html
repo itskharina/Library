@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div>library</div>
+        <button type="button" class="newBook"> + New Book</button>
+    </div>
+    <div class="formContainer" style="display: none">
+        <form class="form">
+            <p class="addBookTitle">Add your book!</p>
+            <div class="input">
+                <input type="text" name="title" id="title-input" placeholder="" autocomplete="off">
+                <label for="title" class="labelName">
+                    <span class="titleLabel">Title of book</span>
+                </label>
+            </div>
+            <div class="input">
+                <input type="text" name="author" id="author-input" placeholder="" autocomplete="off">
+                <label for="author" class="labelName">
+                    <span class="authorLabel">Author of book</span>
+                </label>
+            </div>
+            <div class="input">
+                <input type="number" min="0" name="pages" id="pages-input" placeholder="" autocomplete="off">
+                <label for="pages" class="labelName">
+                    <span class="pagesLabel">Amount of pages</span>
+                </label>
+            </div>
+            <div class="container">
+                <div class="checkbox">
+                    <label for="have-read">Read?</label>
+                    <input type="checkbox" name="have-read" id="have-read">
+                </div>
+                <button type="submit" class="submitBtn">Add</button>
+            </div>
+        </form>
+    </div>
+    <div class="cardDisplay">
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

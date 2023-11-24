@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-color: #352f44; 
+}
+
+.newBook {
+    border: 0;
+    background-color: #5c5470;  
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #dbd8e3;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.newBook:active, .submitBtn:active {
+    transform: translateY(4px);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 50px;
+    color: #352f44; 
+    background-color: #dbd8e3;
+    text-shadow: 2px 3px 4px rgba(68, 68, 68, 0.58);
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* width 560
+ */
+.formContainer {
+    text-align: center;
+    width: 30%;
+    min-width: 320px;
+    height: 500px;
+    background-color: #dbd8e3;;
+    border-radius: 10px;    
+    padding: 4px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    box-shadow: 0 0 0 50vmax rgba(0,0,0, 0.5);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardDisplay {
+    display: flex;
+    text-align: center;
+}
+
+.card {
+    margin-left: 20px;
+    margin-top: 40px;
+    min-width: 320px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #dbd8e3;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+    gap: 10px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.author {
+    font-style: italic;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.removeBtn, .readBtn {
+    border: 0;
+    background-color: #5c5470;  
+    padding: 15px 40px;
+    border-radius: 8px;
+    color: #dbd8e3;
+    font-size: 15px;
+}
+
+.submitBtn {
+    border: 0;
+    background-color: #5c5470;  
+    padding: 15px 40px;
+    border-radius: 8px;
+    margin-left: 20%;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.input > input {
+    border: none;
+    appearance: none;
+    background-color: #dbd8e3;
+    padding: 5px;
+    margin: 40px auto;
+    width: 200px;
+    outline: none;
+}
+
+.input input{
+    border: none;
+    border-bottom: 2px solid silver;
+    width: 60%;
+    height: 60%;
+}
+
+.titleLabel {
+    position: absolute;
+    left: 4%;
+    bottom: 66%;
+    width: 50%;
+    pointer-events: none;
+    color: #474747;
+}
+
+.authorLabel {
+    position: absolute;
+    left: 5.6%;
+    bottom: 45%;
+    width: 50%;
+    pointer-events: none;
+    color: #474747;
+}
+
+.pagesLabel {
+    position: absolute;
+    left: 7%;
+    bottom: 24%;
+    width: 50%;
+    pointer-events: none;
+    color: #474747;
+}
+
+
+.formContainer input:focus + .labelName .titleLabel {
+    transform: translateY(-150%);
+    transition: all 0.2s ease;
+    font-size: 18px;
+}
+
+.formContainer input:not(:placeholder-shown) + .labelName .titleLabel {
+    transform: translateY(-150%);
+    transition: all 0.2s ease;
+    font-size: 18px;
+}
+
+.formContainer input:focus + .labelName .authorLabel {
+    transform: translateY(-150%);
+    transition: all 0.2s ease;
+    font-size: 18px;
+}
+
+.formContainer input:not(:placeholder-shown) + .labelName .authorLabel {
+    transform: translateY(-150%);
+    transition: all 0.2s ease;
+    font-size: 18px;
+}
+
+.formContainer input:focus + .labelName .pagesLabel {
+    transform: translateY(-120%);
+    transition: all 0.2s ease;
+    font-size: 18px;
+}
+
+.formContainer input:not(:placeholder-shown) + .labelName .pagesLabel {
+    transform: translateY(-120%);
+    transition: all 0.2s ease;
+}
+
+.addBookTitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
