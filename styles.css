@@ -11,14 +11,14 @@ body {
     background-color: #5c5470;  
     padding: 15px 40px;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 17px;
     color: #dbd8e3;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.newBook:active, .submitBtn:active {
+.newBook:active, .submitBtn:active, .removeBtn:active, .readBtn:active {
     transform: translateY(4px);
 }
 
@@ -42,7 +42,7 @@ body {
     width: 30%;
     min-width: 320px;
     height: 500px;
-    background-color: #dbd8e3;;
+    background-color: #dbd8e3;  
     border-radius: 10px;    
     padding: 4px;
     left: 50%;
@@ -61,37 +61,62 @@ body {
 .cardDisplay {
     display: flex;
     text-align: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .card {
     margin-left: 20px;
     margin-top: 40px;
     min-width: 320px;
-    height: 300px;
+    height: 280px;
     border-radius: 10px;
     background-color: #dbd8e3;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 17px;
     gap: 10px;
+    padding: 0 20px;
 }
 
 .title {
     font-size: 25px;
     font-weight: bold;
+    height: 50px;
+    margin-top: 30px;
 }
 
 .author {
     font-style: italic;
+    font-size: 18px;
+    margin-top: 10px;
+    height: 50px;
+}
+
+.pages {
+    font-size: 18px;
+    height: 50px;
 }
 
 .text {
     display: flex;
     flex-direction: column;
+}
+
+input[type=checkbox] {
+    transform: scale(1.4);
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+    font-size: 17px;
+    font-family: 'Inter', 'Poppins', sans-serif;
 }
 
 .removeBtn, .readBtn {
@@ -100,11 +125,16 @@ body {
     padding: 15px 40px;
     border-radius: 8px;
     color: #dbd8e3;
-    font-size: 15px;
+    font-size: 16px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .submitBtn {
     border: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-color: #5c5470;  
     padding: 15px 40px;
     border-radius: 8px;
